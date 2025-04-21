@@ -1,0 +1,24 @@
+{
+  "name": "nononsenseweather",
+  "version": "1.0.0",
+  "description": "This is an app that is a multi source weather collector ",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon -e '*", 
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psychicills/NoNonsenseWeather.git"
+  },
+  "author": "Richard S.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/psychicills/NoNonsenseWeather/issues"
+  },
+  "homepage": "https://github.com/psychicills/NoNonsenseWeather#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "nodemon": "^3.1.9"
+  }
+}
