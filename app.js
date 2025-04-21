@@ -12,6 +12,7 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
     res.header("Content-Type", "application/json")
+    console.log("hittin api") //shows up in terminal
     const output = {
         "response": "hello"
     };
