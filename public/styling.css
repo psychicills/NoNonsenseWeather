@@ -11,7 +11,7 @@ body {
 }
 
 #mainHead{
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(126, 178, 238, 0.6);
     text-align: center;
     justify-content: center;
     width: 50%;
@@ -31,4 +31,26 @@ body {
 #mainHead li:hover {
     background-color: black;
     color: white;
+}
+
+#navDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pageName{
+    color: whitesmoke;
+    
+}
+#nameDiv{
+    
+    position: absolute;
+    left: 10;
+    top: 0;
+}
+
+#outerNavDiv{
+    
+    width: 50%;
 }
