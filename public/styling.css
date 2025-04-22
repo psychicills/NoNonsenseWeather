@@ -56,3 +56,12 @@ body {
   
     width: 50%;
 }
+
+#welcomeDiv{
+    background-color: rgb(126, 178, 238);
+    border: black solid 2px;
+    text-align: center;
+    width: 50%;
+    justify-content: center;
+    margin:auto;
+}
