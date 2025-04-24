@@ -32,3 +32,5 @@ app.post('/', (req, res) => {
 app.listen(port, () => {
     console.log(`express app lsitening on port ${port}`)
 });
+
+//"app js is the window.onload for the website" 
