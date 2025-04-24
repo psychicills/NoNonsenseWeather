@@ -17,15 +17,16 @@ body {
     width: 50%;
     align-items: center;
     margin: auto;
-    gap: 20px;
+
+   
 }
 #mainHead ul li {
-    list-style-type: none;
+  
     display: inline-flex;
     text-align: center;
     padding: 20px;
     cursor: pointer ;
-    font-size: 20px;
+    font-size: 16px;
 } 
 
 #mainHead li:hover {
@@ -49,15 +50,24 @@ body {
     left: 10;
     top: 0;
     gap: 20px;
-
+    font-size: 12px;
 }
 
 #outerNavDiv{
-  
+    
     width: 50%;
 }
 
 #welcomeDiv{
+    background-color: rgb(126, 178, 238);
+    border: black solid 2px;
+    text-align: center;
+    width: 50%;
+    justify-content: center;
+    margin:auto;
+}
+
+#randFore{
     background-color: rgb(126, 178, 238);
     border: black solid 2px;
     text-align: center;
