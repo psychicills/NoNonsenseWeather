@@ -6,7 +6,7 @@
         <script src = "homejs.js" defer></script>
         <link rel = "stylesheet" href = "styling.css">
     </head>
-    <body onload = "randWeather()">
+    <body onload = "randWeather(); callAPI()">
         <div id="navDiv">
             <div id="nameDiv">
                 <h1  style = "color: white;">No Nonsense Weather</h1>
@@ -36,9 +36,9 @@
         //maybe throw some customer buttons linking to about and search with a little description?
         //maybe an in recent news... portion 
         <div id = "randFore">
-            <h2>Heres a forecast for somewhere in the world...</h2>
-            <p>Location: </p>
-            <p>Current Temperature: </p>
+            <h2>Heres a forecast for somewhere in the world... (including the poles!)</h2>
+            <p id = "loc">Location: </p>
+            <p id = "temp">Current Temperature: </p>
         </div>
     </body>
 </html>
