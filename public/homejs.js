@@ -29,3 +29,8 @@ async function randWeather() {
 
 //add location trying this api later
 //https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en
+/*
+for coordinate search within the usa 
+ const latitude = (Math.random() * (49.5 - 24.5) + 24.5).toFixed(2);
+  const longitude = (Math.random() * (-66.9 - (-125)) + (-125)).toFixed(2);
+*/
