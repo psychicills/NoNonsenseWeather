@@ -14,7 +14,7 @@ async function randWeather() {
   console.log(latitude)
   console.log(longitude)
   document.getElementById("loc").textContent = `Location: ${latitude}, ${longitude}`
-   await fetch (`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m`)
+  /* await fetch (`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m`)
     .then((response) => response.json())
     .then((weath) =>{
         //const time = weath.hourly.time[weath.hourly.time.length - 1]
@@ -23,7 +23,7 @@ async function randWeather() {
         console.log (temp)
         const temp2 = (temp * (9/5)) + 32;
         document.getElementById("temp").textContent = `Latest Temperature: ${temp2.toFixed(2)}° F`
-    })
+    })*/
 }
 
 

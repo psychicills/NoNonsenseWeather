@@ -75,3 +75,24 @@ body {
     justify-content: center;
     margin:auto;
 }
+
+#homesearchDiv{
+    border: solid black 2px;
+    background-color: rgb(126, 178, 238);
+    width: 50%;
+    align-items: center;
+    text-align: center;
+}
+
+#serandDiv{
+    display: flex;
+    width: 50%;
+    margin: auto;
+    gap : 10px;
+}
+
+#here{
+    cursor: pointer;
+    color: blue ;
+    text-decoration: underline;
+}
