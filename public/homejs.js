@@ -1,3 +1,4 @@
+
 function callAPI(){
     fetch("/", {
         method: 'POST',
@@ -14,7 +15,7 @@ async function randWeather() {
   console.log(latitude)
   console.log(longitude)
   document.getElementById("loc").textContent = `Location: ${latitude}, ${longitude}`
-  /* await fetch (`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&hourly=temperature_2m`)
+  /* await fetch (`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m`)
     .then((response) => response.json())
     .then((weath) =>{
         //const time = weath.hourly.time[weath.hourly.time.length - 1]
@@ -60,21 +61,39 @@ function chartFunc(){
   });
  
 }
-  
+
+async function getLocation(latitude, longitude){
+  let cit = ""
+  let cont = ""
+  await fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`)
+   .then(response =>  response.json())
+               .then(data => {
+                console.log(data)
+                   cit = data.locality;
+                   cont = data.countryCode;
+                   console.log(cit)
+                   document.getElementById("city").textContent = `${cit}, ${cont}`
+})
+ 
+}
 
 async function wData(){
-//    require('dotenv').config();
- // let search = document.getElementById("sLook").value;
- // const apiKey = process.env.WEATHER_API_API_KEY;
- // console.log(apiKey)
+  document.getElementById("searchButt").addEventListener("click", function(){
+ let lat = document.getElementById("sLookLat").value;
+ let long = document.getElementById("sLookLong").value;
+  getLocation(lat, long);
+  });
+  
+ //const apiKey = process.env.WEATHER_API_API_KEY;
+  //console.log(apiKey)
+  
   /*
     
   console.log(tConvertedPrevious)
   let pr = [];
   let t = [];
   console.log("here")
-   await fetch(`https://api.polygon.io/v2/aggs/ticker/${stock}/range/1/day/${tConvertedPrevious}/${tConvertedCurrent}?
-    adjusted=true&sort=asc&limit=120&apiKey=rbNwfBAdlh4UdKRby4MJLgtP0dSvpTcr`)
+   await fetch(`https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m`)
     .then(response => response.json()).then(data =>{
       console.log("here2")
       pr.push(data.results.map(st => st.c))
@@ -94,7 +113,7 @@ async function wData(){
     console.log(t)
   return {prices:pr, time:t}
 */
-  }
+}
 
 
 

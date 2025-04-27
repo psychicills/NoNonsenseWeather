@@ -24,9 +24,11 @@
         </div>
         <div id = "searchPageDiv">
             <form id = "searchForm">
-                <h2>Search weather within the United States by City:</h2>
-                Enter in City Name: <input type = "text" id = "sLook"> 
+                <h2>Enter coordinates for a 7 day forecast:</h2>
+                Latitude: <input type = "text" id = "sLookLat">
+                Longitude: <input type = "text" id = "sLookLong">  
                 <button id = "searchButt" onclick = "chartFunc()">Search!</button>
+                <p>Location: <span id = "city"></span></p>
                 <p>(Below will appear a chart of the recent temperatures)</p>
             </form>
           </div>
