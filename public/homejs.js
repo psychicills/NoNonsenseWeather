@@ -78,41 +78,20 @@ async function getLocation(latitude, longitude){
 }
 
 async function wData(){
-  document.getElementById("searchButt").addEventListener("click", function(){
+  document.getElementById("searchButt").addEventListener("click", async function(){
  let lat = document.getElementById("sLookLat").value;
  let long = document.getElementById("sLookLong").value;
   getLocation(lat, long);
-  });
   
- //const apiKey = process.env.WEATHER_API_API_KEY;
-  //console.log(apiKey)
-  
-  /*
-    
-  console.log(tConvertedPrevious)
-  let pr = [];
-  let t = [];
-  console.log("here")
-   await fetch(`https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m`)
-    .then(response => response.json()).then(data =>{
-      console.log("here2")
-      pr.push(data.results.map(st => st.c))
 
-    //  console.log(r)
 
-      t.push( data.results.map(t=> new Date(t.t).toISOString().split("T")[0]))
-
-     // pr.push(r)
-      //t.push(time)
-      console.log(pr)
-      console.log(t)
+   await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${long}&hourly=temperature_2m`)
+    .then(response => response.json())
+    .then(data =>{
+      console.log(data)
     })
-    console.log("here3")
-
-    console.log(pr)
-    console.log(t)
-  return {prices:pr, time:t}
-*/
+    
+  });
 }
 
 
