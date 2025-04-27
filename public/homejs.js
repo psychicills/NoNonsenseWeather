@@ -26,6 +26,80 @@ async function randWeather() {
     })*/
 }
 
+function chartFunc(){
+    document.getElementById("searchForm").addEventListener("submit", async function(event) {
+      event.preventDefault();
+      //delete chart? (add later hit https 429 too many request skull emoji x2)
+      //instructions never specify to be able to search twice
+   
+     /* if (c) {
+        c.destroy();
+      }
+
+    const ctx = document.getElementById('myChart');
+
+    //console.log(tickData())
+    const {prices, time} = await tickData();;
+    const tflat = time.flat()
+    const pflat = prices.flat()
+    console.log(prices)
+    console.log(time)
+   c = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: tflat,
+        datasets: [{
+          label: '$ Stock Price',
+          data: pflat,
+          fill: false,
+          tension: .04
+        }]
+      },
+    });
+ */
+  });
+ 
+}
+  
+
+async function wData(){
+//    require('dotenv').config();
+ // let search = document.getElementById("sLook").value;
+ // const apiKey = process.env.WEATHER_API_API_KEY;
+ // console.log(apiKey)
+  /*
+    
+  console.log(tConvertedPrevious)
+  let pr = [];
+  let t = [];
+  console.log("here")
+   await fetch(`https://api.polygon.io/v2/aggs/ticker/${stock}/range/1/day/${tConvertedPrevious}/${tConvertedCurrent}?
+    adjusted=true&sort=asc&limit=120&apiKey=rbNwfBAdlh4UdKRby4MJLgtP0dSvpTcr`)
+    .then(response => response.json()).then(data =>{
+      console.log("here2")
+      pr.push(data.results.map(st => st.c))
+
+    //  console.log(r)
+
+      t.push( data.results.map(t=> new Date(t.t).toISOString().split("T")[0]))
+
+     // pr.push(r)
+      //t.push(time)
+      console.log(pr)
+      console.log(t)
+    })
+    console.log("here3")
+
+    console.log(pr)
+    console.log(t)
+  return {prices:pr, time:t}
+*/
+  }
+
+
+
+
+
 
 //add location trying this api later
 //https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en
@@ -34,3 +108,4 @@ for coordinate search within the usa
  const latitude = (Math.random() * (49.5 - 24.5) + 24.5).toFixed(2);
   const longitude = (Math.random() * (-66.9 - (-125)) + (-125)).toFixed(2);
 */
+

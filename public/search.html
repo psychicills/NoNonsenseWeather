@@ -6,7 +6,7 @@
         <script src = "homejs.js" defer></script>
         <link rel = "stylesheet" href = "styling.css">
     </head>
-    <body>
+    <body onload = "wData()">
         <div id="navDiv">
             <div id="nameDiv">
                 <h1 style = "color: white;">No Nonsense Weather</h1>
@@ -22,6 +22,14 @@
                 </nav>
             </div>
         </div>
+        <div id = "searchPageDiv">
+            <form id = "searchForm">
+                <h2>Search weather within the United States by City:</h2>
+                Enter in City Name: <input type = "text" id = "sLook"> 
+                <button id = "searchButt" onclick = "chartFunc()">Search!</button>
+                <p>(Below will appear a chart of the recent temperatures)</p>
+            </form>
+          </div>
         //here we chart weather that is called from 
         //the noaa api - use chart .js 
         
