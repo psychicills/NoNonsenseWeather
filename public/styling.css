@@ -136,7 +136,8 @@ body {
     margin: auto;
     display: flex;
     position: relative;
-    margin: 0 auto;
+    margin: auto;
+    margin-top: 15px;
 }
 
 #aboutDiv{
@@ -151,21 +152,23 @@ body {
 
 #missionDiv{
     border: solid rgba(0, 0, 0, 0) 2px;
-    width: 50%;
+    width: 25%;
     margin: auto;
     text-align: center;
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    font-size: 18px;
 }
 
 #problemDiv{
     border: solid rgba(0, 0, 0, 0) 2px;
-    width: 50%;
+    width: 25%;
     margin: auto;
     text-align: center;
     align-items: center;
     justify-content: center;
+    font-size: 18px;
 }
 
 #ffsDiv{
