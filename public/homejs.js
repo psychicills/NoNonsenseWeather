@@ -66,7 +66,7 @@ async function loginFunc(){
         localStorage.setItem("login", `Welcome, ${un.value}!`);
 
         document.getElementById("loginText").textContent= `Welcome, ${un.value}!`;
-
+        alert("New Account Created Successfully!")
        // updateUser.textContent = un.value;
 
         writeLoginInfo(un.value, pw.value)
