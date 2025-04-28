@@ -53,7 +53,7 @@ async function randWeather() {
         //const time = weath.hourly.time[weath.hourly.time.length - 1]
         //console.log(time)
         try{
-            const temp = weath.hourly.temperature_2m[weath.hourly.temperature_2m.length - 1]
+            const temp = weath.current.temperature_2m;
             console.log (temp)
             const temp2 = (temp * (9/5)) + 32;
             document.getElementById("temp").textContent = `Latest Temperature: ${temp2.toFixed(2)}° F`

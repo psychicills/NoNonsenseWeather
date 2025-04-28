@@ -9,7 +9,9 @@ supda todo:
 add check for if user already exists?
 
 other todo:
-check why randWeather not working now
+finish about page
+finish login page
+finish deployment
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 */
 
