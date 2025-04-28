@@ -7,6 +7,9 @@ npm install body-parser
 
 supda todo:
 add check for if user already exists?
+
+other todo:
+check why randWeather not working now
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 */
 

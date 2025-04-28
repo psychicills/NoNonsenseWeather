@@ -9,18 +9,36 @@ function callAPI(){
     })
 }
 
+
+//something like loginfunc(username) after a callDatabse() that has
+//a const username array to check in login func to make sure that there
+//isnt two ?
+
 function callData(){
   fetch("/login",{
     method: 'GET',
   })
   .then((response) => response.json() )
   .then((responseJSON) =>{
+    loginFunc(responseJSON)
     console.log(responseJSON)
+    console.log("FUCKKKKK")
   })
 }
-//something like loginfunc(username) after a callDatabse() that has
-//a const username array to check in login func to make sure that there
-//isnt two ?
+
+// add responseJSON back
+
+function loginFunc(){
+  document.getElementById("accountForm").addEventListener("submit", function(event){
+    event.preventDefault()
+    callData();
+    const un = document.getElementById("userName");
+    const pw = document.getElementById("passWord");
+    console.log(un)
+    console.log(pw)
+
+  });
+}
 
 
 async function randWeather() {
@@ -34,11 +52,15 @@ async function randWeather() {
     .then((weath) =>{
         //const time = weath.hourly.time[weath.hourly.time.length - 1]
         //console.log(time)
-        const temp = weath.hourly.temperature_2m[weath.hourly.temperature_2m.length - 1]
-        console.log (temp)
-        const temp2 = (temp * (9/5)) + 32;
-        document.getElementById("temp").textContent = `Latest Temperature: ${temp2.toFixed(2)}° F`
-    })
+        try{
+            const temp = weath.hourly.temperature_2m[weath.hourly.temperature_2m.length - 1]
+            console.log (temp)
+            const temp2 = (temp * (9/5)) + 32;
+            document.getElementById("temp").textContent = `Latest Temperature: ${temp2.toFixed(2)}° F`
+        }catch (error){
+            document.getElementById("temp").textContent = `Latest Temperature: Not Availiable/API Down`
+        }
+      })
 }
 
 function chartFunc(){

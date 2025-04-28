@@ -21,10 +21,10 @@ body {
    
 }
 #mainHead ul li {
-    margin-right: auto;
+  
     display: inline-block; 
     padding: 20px;
-    padding-left: 5px;
+
     cursor: pointer ;
     font-size: 16px;
 } 
