@@ -1,5 +1,5 @@
 
-function callAPI(){
+/*function callAPI(){
     fetch("/", {
         method: 'POST',
     })
@@ -7,7 +7,9 @@ function callAPI(){
     .then((responseJSON) =>{
         console.log("response", responseJSON) // this will show in browser
     })
-}
+}*/
+
+//const { json } = require("body-parser")
 
 
 //something like loginfunc(username) after a callDatabse() that has
@@ -39,12 +41,12 @@ async function loginFunc(){
    const apiResponse = await callData();
    const result = await apiResponse;
     
-   console.log(result)
+  // console.log(result)
 
     const un = document.getElementById("userName"); 
     const pw = document.getElementById("passWord");
-    console.log(un.value)
-    console.log(pw.value)
+    //console.log(un.value)
+   // console.log(pw.value)
 
     if(result.some(user => user.user_username === un.value && pw.value !== user.user_password)){
         console.log("ADWAAA")
@@ -53,12 +55,32 @@ async function loginFunc(){
         //login header
         console.log("login")
         document.getElementById("loginText").textContent = `Welcome, ${un.value}!`
+    }else{
+        writeLoginInfo(un.value, pw.value)
     }
 
 
   });
 }
 
+async function writeLoginInfo(username, password){
+    const response = await fetch('/user', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            username: username,
+            password: password,
+        }),
+    });
+
+    if (response.ok) {
+        console.log('User created');
+    } else {
+        console.error('Error in creating user', await response.text());
+    }
+}
 
 async function randWeather() {
     const latitude = (Math.random() * 180 - 90).toFixed(2);
