@@ -68,8 +68,9 @@ app.post('/user', async(req, res) => {
     console.log(req)
 })
 
-/*
+
 //from node js lecture
+/*
 app.get('/', (req, res) => {
     res.sendFile('public/home.html', {root: __dirname});
 });
@@ -82,11 +83,11 @@ app.post('/', (req, res) => {
     };
    
     res.send(JSON.stringify(output));
-});
+});*/
 
 app.listen(port, () => {
     console.log(`express app lsitening on port ${port}`)
 });
 
-*/
+
 //"app js is the window.onload for the website" 
