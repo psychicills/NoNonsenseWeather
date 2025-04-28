@@ -210,3 +210,19 @@ async function wData(){
   
 }
 
+async function nat(){
+  document.getElementById("slider");
+  for (let i = 0; i < 10; i++) {
+    const img = document.getElementById(`pic${i}`);
+    let id = 10 + i;
+    console.log(id)
+      img.src = `https://picsum.photos/id/${id}/200/300`;
+      console.log(img)
+      slider.appendChild(img);
+  }
+}
+
+async function loadFunc() {
+  await simpleslider.getSlider();
+  await nat()
+}

@@ -1,14 +1,15 @@
 <html>
     <head>
         <title>
-            Home Page
+            About Page
         </title>
         <script src = "homejs.js" defer></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
         <link rel = "stylesheet" href = "styling.css">
         
- </script>
     </head>
-    <body onload="changeText()">
+    <body>
         <div id="navDiv">
             <div id="nameDiv">
                 <h1  style = "color: white;">No Nonsense Weather</h1>
@@ -32,16 +33,28 @@
                 </h2>
                 <p onclick = "logout()" style = "cursor: pointer; text-align: center; color: rgba(255, 0, 0, 0.616)">Logout</p>
         </div>
-            //i guess on this page maybe a slider of images or some other 
-            //front end
-            //slider with this api: https://picsum.photos/
-        //then id like a few select image ranges 10-18 maybe
-        </div>
-        
+    </div>
+
+    <div   id = "slider"  data-simple-slider>
+        <img id = "pic0" />
+        <img id = "pic1"/>
+        <img id = "pic2"/>
+        <img id = "pic3"/>
+        <img id = "pic4"/>
+        <img id = "pic5"/>
+        <img id = "pic6"/>
+        <img id = "pic7"/>
+        <img id = "pic8"/>
+        <img id = "pic9"/>
+    </div>
+
     </body>
+     
+
     <script>
         window.onload = function() {
-      
+        loadFunc()
+    
         const savedContent = localStorage.getItem('login');
         console.log("saved", savedContent)
         
