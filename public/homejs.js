@@ -1,4 +1,5 @@
 
+/*
 function callAPI(){
     fetch("/", {
         method: 'POST',
@@ -8,7 +9,7 @@ function callAPI(){
         console.log("response", responseJSON) // this will show in browser
     })
 }
-
+*/
 //const { json } = require("body-parser")
 
 
@@ -59,7 +60,7 @@ async function loginFunc(){
 
         localStorage.setItem("login", `Welcome, ${un.value}!`);
      //   localStorage.setItem(updateUser.textContent, `Welcome, ${un.value}!`);
-      
+        alert("Welcome Back!")
         document.getElementById("loginText").textContent = `Welcome, ${un.value}!`;
 
     }else{
