@@ -25,8 +25,9 @@
             <div id = "loginDiv" onclick = "window.location.href = 'account.html';">
               
                     <h2 id = "loginText">
-                    Login or Sign up
+                        Login or Sign up
                     </h2>
+                    <p onclick = "logout()" style = "cursor: pointer; text-align: center; color: rgba(255, 0, 0, 0.616)">Logout</p>
             
             </div>
             
@@ -42,4 +43,15 @@
             </form>
           </div>
     </body>
+    <script>
+        window.onload = function() {
+        document.getElementById('loginText').textContent = "Login or Sign Up";
+
+        const savedContent = localStorage.getItem('login');
+        console.log("saved", savedContent)
+        
+            document.getElementById('loginText').textContent = savedContent;
+        
+    };
+    </script>
 </html>

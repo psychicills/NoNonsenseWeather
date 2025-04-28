@@ -57,13 +57,13 @@ async function loginFunc(){
 
        // updateUser.textContent = un.value;
 
-        localStorage.setItem(document.getElementById("loginText").textContent, `Welcome, ${un.value}!`);
+        localStorage.setItem("login", `Welcome, ${un.value}!`);
      //   localStorage.setItem(updateUser.textContent, `Welcome, ${un.value}!`);
       
         document.getElementById("loginText").textContent = `Welcome, ${un.value}!`;
 
     }else{
-        localStorage.setItem(document.getElementById("loginText").textContent, `Welcome, ${un.value}!`);
+        localStorage.setItem("login", `Welcome, ${un.value}!`);
 
         document.getElementById("loginText").textContent= `Welcome, ${un.value}!`;
 
@@ -75,7 +75,18 @@ async function loginFunc(){
   });
 }
 
+function changeText() {
+  
+  const savedContent = localStorage.getItem('login');
+  console.log("getting item", savedContent)
+  localStorage.setItem('login', savedContent);
+  
+};
 
+function logout(){
+ const remove = "Login or Sign Up"
+ localStorage.setItem('login', remove);
+}
 
 async function writeLoginInfo(username, password){
     const response = await fetch('/user', {

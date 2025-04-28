@@ -5,9 +5,10 @@
         </title>
         <script src = "homejs.js" defer></script>
         <link rel = "stylesheet" href = "styling.css">
+        
  </script>
     </head>
-    <body>
+    <body onload="changeText()">
         <div id="navDiv">
             <div id="nameDiv">
                 <h1  style = "color: white;">No Nonsense Weather</h1>
@@ -29,7 +30,7 @@
                 <h2 id = "loginText">
                 Login or Sign up
                 </h2>
-        
+                <p onclick = "logout()" style = "cursor: pointer; text-align: center; color: rgba(255, 0, 0, 0.616)">Logout</p>
         </div>
             //i guess on this page maybe a slider of images or some other 
             //front end
@@ -38,4 +39,14 @@
         </div>
         
     </body>
+    <script>
+        window.onload = function() {
+      
+        const savedContent = localStorage.getItem('login');
+        console.log("saved", savedContent)
+        
+            document.getElementById('loginText').textContent = savedContent;
+        
+    };
+    </script>
 </html>

@@ -28,6 +28,8 @@
                 <h2 id = "loginText">
                 Login or Sign up
                 </h2>
+                <p onclick = "logout()" style = "cursor: pointer; text-align: center; color: rgba(255, 0, 0, 0.616)">Logout</p>
+
         
             </div>
         </div>
@@ -47,4 +49,15 @@
         //the noaa api - use chart .js 
         
     </body>
+    <script>
+        window.onload = function() {
+        document.getElementById('loginText').textContent = "Login or Sign Up";
+
+        const savedContent = localStorage.getItem('login');
+        console.log("saved", savedContent)
+        
+            document.getElementById('loginText').textContent = savedContent;
+        
+    };
+    </script>
 </html>
