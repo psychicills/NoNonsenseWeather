@@ -216,7 +216,7 @@ async function nat(){
     const img = document.getElementById(`pic${i}`);
     let id = 10 + i;
     console.log(id)
-      img.src = `https://picsum.photos/id/${id}/200/300`;
+      img.src = `https://picsum.photos/id/${id}/400/500`;
       console.log(img)
       slider.appendChild(img);
   }

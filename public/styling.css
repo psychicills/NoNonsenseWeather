@@ -129,8 +129,8 @@ body {
 
 
 #slider {
-    width: 200px;
-    height: 300px;
+    width: 400px;
+    height: 500px;
     align-items: center;
     justify-content: center;
     margin: auto;
@@ -138,13 +138,32 @@ body {
     position: relative;
     margin: 0 auto;
 }
-#slider img {
-    width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  transition: left 1s ease-in-out
+
+#aboutDiv{
+    border: solid black 2px;
+    background-color: rgb(126, 178, 238);
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex
 }
 
+#missionDiv{
+
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#problemDiv{
+ 
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
