@@ -14,28 +14,42 @@ function callAPI(){
 //a const username array to check in login func to make sure that there
 //isnt two ?
 
-function callData(){
-  fetch("/login",{
+async function callData(){
+    const t = []
+  await fetch("/login",{
     method: 'GET',
   })
   .then((response) => response.json() )
   .then((responseJSON) =>{
-    loginFunc(responseJSON)
     console.log(responseJSON)
-    console.log("FUCKKKKK")
+    responseJSON.forEach(id => {
+        t.push(id)
+    })
+   // console.log(t)
   })
+  return t
 }
 
 // add responseJSON back
 
-function loginFunc(){
-  document.getElementById("accountForm").addEventListener("submit", function(event){
+async function loginFunc(){
+  document.getElementById("accountForm").addEventListener("submit", async function(event){
     event.preventDefault()
-    callData();
-    const un = document.getElementById("userName");
+
+   const apiResponse = await callData();
+   const result = await apiResponse;
+    
+   console.log(result)
+
+    const un = document.getElementById("userName"); 
     const pw = document.getElementById("passWord");
-    console.log(un)
+    console.log(un.value)
     console.log(pw)
+
+    if(result.some(user => user.user_username == un.value)){
+        console.log("ADWAAA")
+        alert("That Username has already been taken!")
+    }
 
   });
 }
