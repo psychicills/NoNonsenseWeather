@@ -38,6 +38,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: solid black 2px;
+    
 }
 
 #pageName{
@@ -54,8 +56,9 @@ body {
 }
 
 #outerNavDiv{
-    
+    border: solid black 2px;
     width: 50%;
+    position: relative;
 }
 
 #welcomeDiv{
@@ -113,4 +116,12 @@ body {
     text-align: center;
     align-items: center;
     justify-content: center;
+}
+
+#loginDiv{
+    border: solid black 2px;
+    position: absolute;
+    right:15px;
+    color: white;
+    cursor: pointer;
 }

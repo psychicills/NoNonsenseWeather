@@ -11,6 +11,7 @@ add check for if user already exists?
 other todo:
 finish about page
 finish login page
+    make login pw hidden
 finish deployment
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 */

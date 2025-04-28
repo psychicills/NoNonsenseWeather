@@ -44,12 +44,17 @@ async function loginFunc(){
     const un = document.getElementById("userName"); 
     const pw = document.getElementById("passWord");
     console.log(un.value)
-    console.log(pw)
+    console.log(pw.value)
 
-    if(result.some(user => user.user_username == un.value)){
+    if(result.some(user => user.user_username === un.value && pw.value !== user.user_password)){
         console.log("ADWAAA")
         alert("That Username has already been taken!")
+    }else if(result.some(user => user.user_username == un.value && pw.value == user.user_password)){
+        //login header
+        console.log("login")
+        document.getElementById("loginText").textContent = `Welcome, ${un.value}!`
     }
+
 
   });
 }
