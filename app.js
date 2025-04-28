@@ -8,7 +8,7 @@ npm install body-parser
 */
 
 const express = require('express')
-const supabaseClient = require('@supabase/supbase-js')
+const supabaseClient = require('@supabase/supabase-js')
 const bodyParser = require('body-parser')
 const dotenv = require('dotenv');
 dotenv.config();
@@ -20,9 +20,10 @@ const port = 3000;
 app.use(bodyParser.json());
 
 app.use(express.static(__dirname + '/public'));
-const supabaseUrl = "";
-const supabaseKey = '';
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const supabase = supabaseClient.createClient(supabaseUrl, supabaseKey);
+//left off at 35:46
 
 app.get('/login', async (req, res) => {
     console.log('attempting to GET login info');
@@ -33,20 +34,27 @@ app.get('/login', async (req, res) => {
         res.statusCode = 400;
         res.send(error)
     }
-    res.send('data')
+    res.send(data)
 })
 
 app.post('/user', async(req, res) => {
-    console.log('adding customer')
+    console.log('adding user')
     console.log(req.body);
     const username = req.body.username;
     const pw = req.body.password;
     
     const {data, error} = await supabase
-    .from('')
-    .insert({})
+    .from('user')
+    .insert({
+        user_username: username,
+         user_password:pw
+        })
     .select()
-
+    if (error){
+        console.log(`Error: ${error}`)
+        res.statusCode = 500;
+        res.send(error)
+    }
     res.send()
     console.log(req)
 })
