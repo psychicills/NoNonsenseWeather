@@ -7,24 +7,24 @@ body {
     margin: 0;
     font-family: Arial;
   
-    gap: 20px;
+  
 }
 
 #mainHead{
     background-color: rgba(126, 178, 238, 0.6);
     text-align: center;
     justify-content: center;
-    width: 50%;
+    width: 65%;
     align-items: center;
     margin: auto;
 
    
 }
 #mainHead ul li {
-  
-    display: inline-flex;
-    text-align: center;
+    margin-right: auto;
+    display: inline-block; 
     padding: 20px;
+    padding-left: 5px;
     cursor: pointer ;
     font-size: 16px;
 } 
@@ -103,4 +103,14 @@ body {
     display:inline-block;
     margin-left:10px;
     padding: 5px;
+}
+
+#accountpageDiv{
+    border: solid black 2px;
+    background-color: rgb(126, 178, 238);
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }

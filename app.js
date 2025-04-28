@@ -4,6 +4,9 @@ DONT FORGET TO NPM INSTALL DEPENDENCIES WHEN PICK BACK UP ON OTHER
 COMPUTER
 npm install @supabase/supabase-js
 npm install body-parser
+
+supda todo:
+add check for if user already exists?
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 */
 

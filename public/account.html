@@ -1,1 +1,37 @@
-//may delete this one
+<html>
+    <head>
+        <title>
+            Home Page
+        </title>
+        <script src = "homejs.js" defer></script>
+        <link rel = "stylesheet" href = "styling.css">
+    </head>
+    <body>
+        <div id="navDiv">
+            <div id="nameDiv">
+                <h1  style = "color: white;">No Nonsense Weather</h1>
+                <h2 style = "bottom: 0; margin-top: auto; margin-bottom: auto;" id = "pageName">About Page</h2>
+            </div>
+             <div id = "outerNavDiv">
+                <nav  id = "mainHead">
+                    <ul>
+                        <li onclick = "window.location.href = 'about.html';"><b>About</b></li>
+                        <li onclick = "window.location.href = 'home.html';"><b>Home</b></li>
+                        <li onclick = "window.location.href = 'search.html';"><b>Search Weather</b></li>
+                        <li onclick = "window.location.href = 'account.html';"><b>Login</b></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id = "accountpageDiv">
+            <form id = "accountForm">
+                <h2>Create an Account or Login:</h2>
+                Username:<input type = "text" id = "userName">
+                <br>
+                Password: <input type = "text" id = "passWord"> 
+                <br> 
+                <button style = "margin-left:70px;" id = "accountButt" onclick = "">Login</button>
+            </form>
+          </div>
+    </body>
+</html>

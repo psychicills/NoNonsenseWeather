@@ -9,6 +9,20 @@ function callAPI(){
     })
 }
 
+function callData(){
+  fetch("/login",{
+    method: 'GET',
+  })
+  .then((response) => response.json() )
+  .then((responseJSON) =>{
+    console.log(responseJSON)
+  })
+}
+//something like loginfunc(username) after a callDatabse() that has
+//a const username array to check in login func to make sure that there
+//isnt two ?
+
+
 async function randWeather() {
     const latitude = (Math.random() * 180 - 90).toFixed(2);
   const longitude = (Math.random() * 360 - 180).toFixed(2);
@@ -108,3 +122,4 @@ async function wData(){
   
 }
 
+//window.onload = callData;
