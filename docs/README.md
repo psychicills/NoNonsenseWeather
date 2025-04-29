@@ -1,13 +1,13 @@
 # Table of Contents
 
-- [NoNonsenseWeather] (#nononsenseweather)
-- [Target-Browsers] (#target-browsers)
-- [Further-Reading] (#further-reading)
-- [How-to-install-Dependencies] (#how-to-install-dependencies)
-- [How-to-run-the-application-on-a-server] (#how-to-run-the-application-on-a-server)
-- [Testing] (#important-tests)
-- [API-Endpoints-GET-and-POST] (#api-endpoints-get-and-post)
-- [Future-roadmap] (#future-roadmap)
+- [NoNonsenseWeather](#nononsenseweather)
+- [Target Browsers](#target-browsers)
+- [Further Reading](#further-reading)
+- [Dependencies](#how-to-install-dependencies)
+- [Running The App](#how-to-run-the-application-on-a-server)
+- [Testing](#important-tests)
+- [API Endpoints](#api-endpoints-get-and-post)
+- [Future roadmap](#future-roadmap)
 
 # NoNonsenseWeather
 
