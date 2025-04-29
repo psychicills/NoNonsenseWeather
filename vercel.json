@@ -7,11 +7,9 @@
         }
     ],
     "routes": [
-        { "src": "/app.js", "dest": "/app.js" },
-        { "src": "/about", "dest": "/about.html" },
-        { "src": "/account", "dest": "/account.html" },
-        { "src": "/home", "dest": "/home.html" },
-        { "src": "/search", "dest": "/search.html" },
-        { "src": "/(.*)", "dest": "/" }
+        {
+            "src": "/(.*)",
+            "dest": "/"
+        }
     ]
 }
