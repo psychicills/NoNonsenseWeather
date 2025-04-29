@@ -29,6 +29,7 @@ const port = 3000;
 app.use(bodyParser.json());
 
 app.use(express.static(__dirname + '/public'));
+
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_ANON_KEY;
 const supabase = supabaseClient.createClient(supabaseUrl, supabaseKey);
@@ -90,4 +91,6 @@ app.listen(port, () => {
 });
 
 
-//"app js is the window.onload for the website" 
+const serverless = require('serverless-http');
+module.exports = app;
+module.exports.handler = serverless(app);
