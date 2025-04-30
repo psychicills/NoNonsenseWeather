@@ -71,11 +71,12 @@ app.post('/user', async(req, res) => {
 
 
 //from node js lecture
-/*
+
 app.get('/', (req, res) => {
     res.sendFile('public/home.html', {root: __dirname});
 });
 
+/*
 app.post('/', (req, res) => {
     res.header("Content-Type", "application/json")
     console.log("hittin api") //shows up in terminal
@@ -84,8 +85,8 @@ app.post('/', (req, res) => {
     };
    
     res.send(JSON.stringify(output));
-});*/
-
+});
+*/
 app.listen(port, () => {
     console.log(`express app lsitening on port ${port}`)
 });
