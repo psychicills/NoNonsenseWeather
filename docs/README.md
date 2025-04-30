@@ -105,12 +105,12 @@ And the server will restart.
 
 # Important Tests
 
-Within the app.js file, there are some key console.log() that will indicate whether or not your server is up and running, or if you are actually reaching those portions of the app. Otherwise you will be thrown an error. These messages are:
+Within the index.js file, there are some key console.log() that will indicate whether or not your server is up and running, or if you are actually reaching those portions of the app. Otherwise you will be thrown an error. These messages are:
 
 ```javascript
 console.log("attempting to GET login info"); //The GET message for Supabase
 console.log("adding user"); //The POST message for Supabase
-console.log(`express app lsitening on port ${port}`); //Indication that your server is running on your desired port, 3000 was used in the app.js
+console.log(`express app lsitening on port ${port}`); //Indication that your server is running on your desired port, 3000 was used in the index.js
 ```
 
 # API Endpoints GET and POST
