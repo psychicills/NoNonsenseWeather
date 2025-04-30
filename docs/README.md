@@ -21,7 +21,7 @@ may look a bit off however funcitonality is the same.
 
 # Further Reading
 
-Click this link: [developer-manual] (#Developer-Manual) in order to view the developer manual for further reading.
+Click this link: [developer-manual](#Developer-Manual) in order to view the developer manual for further reading.
 
 # Developer Manual
 
