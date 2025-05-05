@@ -16,7 +16,7 @@ different weather forcast(s) for locations that are desried by the user.
 
 # Target Browsers
 
-The app works the best in Google Chrome and is meant to be a desktop application, iOS and Android
+The app works the best in Google Chrome, but still works on other contemporary browsers and is meant to be a desktop application, iOS and Android
 may look a bit off however funcitonality is the same.
 
 # Further Reading
